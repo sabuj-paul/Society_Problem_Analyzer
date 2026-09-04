@@ -1,6 +1,9 @@
 # 🏛️ Society Problem Reporter & Analyzer (SPRS)
 
-**Project Lead / Developer:** Syndid Choudhury  
+**Project Lead / Developer:** Sabuj Kumar paul
+
+Second Lead : Anique Kumar Das
+
 **Date:** September 4, 2026  
 **Project Type:** Client-side Frontend Web Application Prototype  
 
