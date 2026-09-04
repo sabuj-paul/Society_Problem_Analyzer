@@ -1,47 +1,72 @@
-# 🎨 Frontend Stylesheet Documentation
+# 🏛️ Society Problem Reporter & Analyzer (SPRS)
 
-**Developer / Contributor:** Jamiul (`jamiul`)[cite: 5]  
-**File:** `style.css`[cite: 8]  
-**Role:** Complete User Interface Styling & Visual System Design[cite: 8]  
+**Project Lead / Developer:** Sabuj Kumar paul
 
----
+Second Lead : Anique Kumar Das
 
-## 📌 Stylesheet Overview
-
-This document provides a breakdown of the custom CSS styling implemented by Jamiul for the application[cite: 8]. The stylesheet defines the visual identity, responsive typography, CSS Grid and Flexbox structures, dynamic UI states, component cards, custom forms, and modal overlays[cite: 8].
+**Date:** September 4, 2026  
+**Project Type:** Client-side Frontend Web Application Prototype  
 
 ---
 
-## 🎨 Core Design System & Styling Rules
+## 📌 Project Overview
 
-* **Typography & Reset:** Built on the Inter font family with universal box-sizing (`box-sizing: border-box`) and explicit input inheritance rules[cite: 8].
-* **Layout Engine:** Custom two-column auth grid, sticky desktop header with fixed navigation sidebar, and multi-column grid layouts for dashboards[cite: 8].
-* **Component UI System:** Includes styled KPI cards, custom form controls, notification toast pipelines, bar chart indicators, and modal dialogs[cite: 8].
-* **Status Badge Styling:** Distinct color-coded status pills for review (`#2865b5`), in-progress (`#ad6d08`), resolved (`#14885c`), and rejected (`#c54f59`) states[cite: 8].
-* **Responsive Breakpoints:** 
-  * `@media (max-width: 1050px)`: Collapses two-column grids into single columns and hides background art panels[cite: 8].
-  * `@media (max-width: 760px)`: Collapses the navigation sidebar into an icon-only mode and adjusts layout spacing for mobile viewports[cite: 8].
+The **Society Problem Reporter & Analyzer (SPRS)** is an interactive, civic-tech web platform prototype engineered to bridge the gap between local citizens, civic maintenance teams, and municipality administrators[cite: 6]. 
+
+The application facilitates end-to-end community issue tracking—allowing residents to report local public infrastructure problems (such as road potholes, broken street lights, waste overflow, and water leakages), upvote community priorities, track issue resolution timelines, and analyze civic trends[cite: 3, 6].
 
 ---
 
-## 📂 CSS Component Structure
+## 📸 Core Features & Demonstration Highlights
 
-| CSS Class / Selector | Component Purpose | Key Features |
-| :--- | :--- | :--- |
-| `.auth`, `.auth-art`, `.auth-panel` | Authentication Layout | CSS Grid structure, background gradients, and art statistics layout[cite: 8]. |
-| `aside`, `nav`, `.user` | Navigation Sidebar | Fixed left-aligned navigation with active states (`nav button.active`) and sub-labels[cite: 8]. |
-| `header`, `.search`, `.bell` | Top Navigation Header | Sticky position header, search bar styling, and notification bell indicators[cite: 8]. |
-| `.card`, `.stat`, `.twocol` | Dashboard Cards | Elevated card containers with drop shadows (`box-shadow`), KPI displays, and background accents[cite: 8]. |
-| `.status` | Status Badges | Dynamic color palettes for report resolution states[cite: 8]. |
-| `.chart`, `.bar` | Data Visualization | Flexbox-driven bar charts with gradient fills (`#70b7ff` to `#1268d8`) and inline labels[cite: 8]. |
-| `.modalwrap`, `.modal` | Overlay Windows | Fixed backdrop with centered modal card for detail views[cite: 8]. |
-| `#toast` | Notification Alerts | Fixed position popups with smooth CSS transition state toggling (`#toast.show`)[cite: 8]. |
+### 🔒 1. Multi-Role Authentication System
+The application features dynamic role switching upon authentication, adjusting navigation items and access permissions based on user credentials[cite: 3]:
+* **Citizen Account (`citizen@demo.com`)**: Access to issue reporting, voting, tracking personal submissions, and receiving notifications[cite: 3, 6].
+* **Local Authority Desk (`authority@demo.com`)**: Unlocks the *Authority Desk* workspace to review assigned issues and update resolution statuses (*Under Review*, *In Progress*, *Resolved*)[cite: 3, 6].
+* **Administrator Account (`admin@demo.com`)**: Unlocks the *Administration* and *User Management* dashboards to monitor platform health, active users, storage usage, and system-wide reports[cite: 3, 6].
 
 ---
 
-## 🛠️ Usage
+### 📋 2. Comprehensive Civic Dashboards
+* **Overview Dashboard**: High-level KPI cards displaying active user reports, overall community reports, resolved issues count, total community votes, quick action launcher, and recent activity logs[cite: 3].
+* **Report Directory & Smart Search**: Real-time multi-field search engine supporting title, category, and location filtering, paired with status and category dropdown selectors[cite: 3, 6].
+* **Community Upvoting & Priority Engine**: Citizens can upvote critical local issues to raise community priority and visibility[cite: 3, 6].
+* **Detailed Report Inspection Modal**: Inspect complete issue details, submitter information, geolocation tags, priority level, and live resolution timelines[cite: 3, 6].
 
-Ensure this CSS file is linked inside your HTML document's `<head>` tag:
+---
 
-```html
-<link rel="stylesheet" href="style.css" />
+### 📊 3. Analytics & Platform Monitoring
+* **Category Breakdown Bar Charts**: Visual breakdown of reported issues across core categories (*Lighting*, *Waste*, *Roads*, *Water*, *Safety*, *Other*)[cite: 3].
+* **Resolution Metering**: Live metric bars showing the proportion of open vs. resolved civic issues[cite: 3].
+* **Platform Health Monitoring**: Administrative overview tracking API availability (99.9%), report processing rate (98.4%), and notification delivery efficiency[cite: 3].
+
+---
+
+### 🎨 4. Theme & Interactive UI Features
+* **Dark / Light Mode**: Instant layout theme switching[cite: 3, 6].
+* **Notification Center**: Unread activity badge counter with "Mark all as read" functionality[cite: 3, 6].
+* **Toast Notification Pipeline**: Instant visual feedback for user actions (e.g., status changes, report submissions, votes)[cite: 3].
+* **Local Persistence**: Browser-level `localStorage` integration preserving working state across sessions[cite: 3, 6].
+
+---
+
+## 🛠️ Tech Stack & Architecture
+
+| Layer | Technology |
+| :--- | :--- |
+| **Markup** | HTML5 (Semantic Layout & Form Structures) |
+| **Styling** | Custom Modern CSS3 (CSS Grid, Flexbox, Variable States, Dark Mode Toggle)[cite: 4, 6] |
+| **Scripts** | Vanilla JavaScript (ES6+, Dynamic DOM Rendering, Array Manipulation, State Serialization)[cite: 3, 6] |
+| **Typography** | Inter Font via Google Fonts[cite: 4, 5] |
+| **Storage** | HTML5 `localStorage` (`spr_reports`, `spr_role`, `spr_user`, `spr_logged`)[cite: 3, 6] |
+
+---
+
+## 📁 File Hierarchy
+
+```text
+.
+├── index.html       # Primary application markup and layout containers
+├── style.css        # Layout styling, UI component design, and theme rules
+├── script.js        # Core logic, dynamic UI rendering, state operations & routing
+└── README.md        # Comprehensive project documentation
